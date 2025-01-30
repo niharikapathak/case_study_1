@@ -13,6 +13,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTransaction, removeTransaction } from "../redux/slices/transactionsSlice";
 import { TrashIcon } from '@heroicons/react/24/solid'
+import PieChart from "./PieChart";
 
 const AddingExpense = () => {
   const [amount, setAmount] = useState("");
@@ -97,6 +98,11 @@ console.log(e)
           
         </tbody>}
       </table>
+
+
+
+
+      <PieChart/>
         </div>
       <div className="w-[40%] h-[100vh] full border-r-[1px] px-[10px] ">
         <form
@@ -150,6 +156,8 @@ console.log(e)
           />
           <button type="submit" className="w-[13vw] h-[7vh] rounded-[3px] border-[1px]">Add Transaction</button>
         </form>
+
+
       </div>
     </div>
   );

@@ -14,12 +14,12 @@ const transactionsSlice = createSlice({
     },
     removeTransaction: (state, action) => {
       state.transactions = state.transactions.filter(
-        (tx) => tx.id !== action.payload
+        (tx,index) => index !== action.payload
       );
     },
     updateTransaction: (state, action) => {
       const index = state.transactions.findIndex(
-        (tx) => tx.id === action.payload.id
+        (tx) => tx.id === action.payload
       );
       if (index >= 0) {
         state.transactions[index] = action.payload;

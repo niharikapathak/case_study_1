@@ -1,10 +1,14 @@
+
+import PieChart from "./PieChart";
 const ChartShowing = () => {
 
     return (
-        <div>
-            <h1>Chart Showing</h1>
-            <p></p>
+        
+             <div className="flex h-[100vh]">
+            
+            <PieChart/>
         </div>
+        
     )
 }
 

@@ -10,4 +10,5 @@ import flowbite from "flowbite/plugin";
       extend: {},
     },
     plugins: [ flowbite],
+    darkMode:'class'
   };

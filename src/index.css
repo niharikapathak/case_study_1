@@ -2,4 +2,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@source "../node_modules/flowbite";
+
+.dark {
+    --bg-color: #121212; /* Dark mode background */
+    --text-color: #918e8e; /* Dark mode text color */
+  }
+  
+  /* Apply the variables globally */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  input {
+    color: var(--input-text-color); /* Apply input text color */
+    background-color: var(--bg-color); /* Apply background for input field */
+  }
+  
+  /* Additional input field styling if needed */
+  input:focus {
+    border-color: var(--text-color); /* Border color on focus */
+  }

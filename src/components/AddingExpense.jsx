@@ -58,7 +58,7 @@ console.log(e)
 }
 
   return (
-    <div className="flex h-[100vh]">
+    <div className="flex h-[84vh]">
     
       <div className="w-[71%] border-r-[1px] flex flex-col items-center">
         
@@ -104,7 +104,7 @@ console.log(e)
 
       <PieChart/>
         </div>
-      <div className="w-[40%] h-[100vh] full border-r-[1px] px-[10px] ">
+      <div className="w-[40%] h-[84vh] full border-r-[1px] px-[10px] ">
         <form
           onSubmit={handleSubmit}
           className="flex flex-col  w-full h-full gap-[10px] mt-[5vh] items-center "
@@ -114,21 +114,27 @@ console.log(e)
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             placeholder="Enter Amount"
-            className="w-[98%] rounded-[7px]"
+            className="w-[98%] rounded-[7px] "
           />
           <select
-            value={type}
-            onChange={(e) => setType(e.target.value)}
-            className="w-[98%] rounded-[7px]"
-          >
-            <option value="Expense">Expense</option>
-            <option value="Income">Income</option>
-          </select>
+      value={type} 
+      onChange={(e) => setType(e.target.value)} 
+      className="w-[98%] rounded-[7px]"
+    >
+      {/* This is the placeholder option */}
+      <option value="" disabled>Select Type</option> 
+
+      {/* Other options */}
+      <option value="Expense">Expense</option>
+      <option value="Income">Income</option>
+    </select>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             className="w-[98%] rounded-[7px]"
+            placeholder="Select Category"
           >
+            <option value="" disabled selected>Select Category</option>
             {type === "Expense"
               ? [
                   "Fuel",

@@ -57,10 +57,27 @@ console.log(e)
 
 }
 
+
+const totalIncome = transactions
+.filter((tx) => tx.type === "Income")
+.reduce((total, tx) => total + parseFloat(tx.amount), 0);
+
+const totalExpense = transactions
+.filter((tx) => tx.type === "Expense")
+.reduce((total, tx) => total + parseFloat(tx.amount), 0);
+
   return (
-    <div className="flex h-[84vh]">
+    <div className="flex h-[98%]">
     
       <div className="w-[71%] border-r-[1px] flex flex-col items-center">
+       <div className="w-full flex gap-[10px] justify-center">
+       <p> 
+          TOTAL EXPENSE: {totalExpense}
+        </p>
+        <p>
+          TOTAL INCOME: {totalIncome}
+        </p>
+       </div>
         
       <table className="w-[90%] table-auto border-collapse border-[1px] mt-[2vh]">
         <thead>
@@ -104,10 +121,10 @@ console.log(e)
 
       <PieChart/>
         </div>
-      <div className="w-[40%] h-[84vh] full border-r-[1px] px-[10px] ">
+      <div className="w-[40%] h-full full border-r-[1px] px-[10px] ">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col  w-full h-full gap-[10px] mt-[5vh] items-center "
+          className="flex flex-col  w-full h-[98%] gap-[10px] mt-[5vh] items-center "
         >
           <input
             type="number"

@@ -4,7 +4,7 @@ const ChartShowing = () => {
 
     return (
         
-             <div className="flex h-[100vh]">
+             <div className="flex h-[86vh]">
             
             <PieChart/>
         </div>

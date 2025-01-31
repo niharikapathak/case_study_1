@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { auth, signInWithPopup, provider, onAuthStateChanged, signOut } from './firebase/firebaseFile';  // Adjust the import based on your firebase.js location
 import { setUser, logoutUser } from './redux/slices/userSlice';
 import { useEffect, useState } from 'react';
+import "./assets/NavbarCssfile.css"
 
 const Navbar = () => {
 
@@ -25,7 +26,7 @@ const Navbar = () => {
 
 
   return (<>
- <div className="w-[98vw] h-[10vh] bg-white text-black flex justify-between items-center border-b border-gray-300 
+ <div className="w-[100vw] h-[10vh] bg-white text-black flex justify-between items-center border-b border-gray-300  shadow
  "
  >
 
